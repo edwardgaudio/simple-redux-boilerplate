@@ -2,10 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as CounterActions from '../actions/CounterActions';
-import * as WeatherActions from '../actions/WeatherActions';
-import * as starwarsActions from '../actions/StarwarsActions';
+import * as StarwarsActions from '../actions/StarwarsActions';
 import Counter from '../components/Counter';
-import Weather from './Weather';
 import Starwars from './Starwars';
 
 /**
@@ -16,14 +14,13 @@ import Starwars from './Starwars';
 
 class App extends Component {
   render() {
-    const { forecast, counter, starwarsData, counterActions,
-            weatherActions, starwarsActions
+    const { counter, starwarsData, counterActions,
+            starwarsActions,
           } = this.props;
     return (
       <div className="main-app-container">
         <div className="main-app-nav">Simple Redux Boilerplate</div>
         <Counter counter={counter} actions={counterActions} />
-        <Weather forecast={forecast} actions={weatherActions} />
         <Starwars data={starwarsData} actions={starwarsActions} />
       </div>
     );
@@ -32,7 +29,6 @@ class App extends Component {
 
 App.propTypes = {
   counter: PropTypes.number.isRequired,
-  forecast: PropTypes.object.isRequired,
   starwarsData: PropTypes.object.isRequired,
   counterActions: PropTypes.object.isRequired,
   weatherActions: PropTypes.object.isRequired,
@@ -47,7 +43,6 @@ App.propTypes = {
 function mapStateToProps(state) {
   return {
     counter: state.counter,
-    forecast: state.forecast,
     starwarsData: state.starwars,
   };
 }
@@ -63,8 +58,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     counterActions: bindActionCreators(CounterActions, dispatch),
-    weatherActions: bindActionCreators(WeatherActions, dispatch),
-    starwarsActions: bindActionCreators(starwarsActions, dispatch),
+    starwarsActions: bindActionCreators(StarwarsActions, dispatch),
   };
 }
 

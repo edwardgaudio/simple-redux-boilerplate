@@ -2,9 +2,9 @@
 
 A simple, yet comprehensive React + Redux application, complete with DevTools.
 
-Author: [@tsaiDavid](https://github.com/tsaiDavid/) | [www.davidtsai.codes](https://www.davidtsai.codes)
+Maintainer: Edward D. Gaudio - [edg.audio](http:edg.audio.com)
 
-*Let's make this a community effort! Many thanks for all the great suggestions and help that's already underway!*
+*Feel free to contribute!  Just make a pr and issue with your suggestions/changes*
 
 ***
 
@@ -23,13 +23,14 @@ This is the perfect way to start any React + Redux application - **especially if
 
 With educational comments and documentation sprinkled throughout this app, you'll learn and see how all the pieces come together - from Webpack and Babel all the way through React with Redux.
 
-Designed to keep style/structure as un-opinionated as possible,  to offer you - the user - as much creativity and flexibility when it comes to your needs. As this is stil a **work-in-progress**, do reach out if you have suggestions, fixes, etc! If you want to help, a basic Roadmap can be found below!
+Designed to keep style/structure as un-opinionated as possible,  to offer you - the user - as much creativity and flexibility when it comes to your needs. As this is still a **work-in-progress**, do reach out if you have suggestions, fixes, etc! If you want to help, a basic Roadmap can be found below!
 
-This project features a super simple UI - just for you to see how everything is wired up, using the classic counter example:
+This project features a super simple UI - just for you to see how everything is wired up, using the classic counter example and a
+simple api pull using thunks:
 
 ![](https://fat.gfycat.com/WarlikeFrightenedGraywolf.gif)
 
-If you found this helpful, please star/fork/follow me on **[GitHub](https://github.com/tsaiDavid/)** and follow me on **[Twitter](https://twitter.com/tftsai)**! 
+If you found this helpful, please star/fork/follow me on **[GitHub](https://github.com/edwardgaudio/)** and follow me on **[Twitter](https://twitter.com/pickybastard)**!
 
 ### Features
 
@@ -47,7 +48,7 @@ If you found this helpful, please star/fork/follow me on **[GitHub](https://gith
 ***
 
 ### Requirements
-  - `node 5.0.0` and higher!
+  - `node 6.8.1` and higher!
     - [*you can use a version manager like `n`*](https://github.com/tj/n)
 
 ***
@@ -60,14 +61,6 @@ If you found this helpful, please star/fork/follow me on **[GitHub](https://gith
   - Why not use WebpackDevServer?
   > The included `devServer.js` is a Node/Express server - mainly because most people will end up creating applications that rely on a Node server! Using the `webpack-dev-middleware` and `webpack-hot-middleware` allow us to get syntax errors displayed in an overlay, which using WebpackDevServer doesn't allow for.
 
-  >![](https://cloud.githubusercontent.com/assets/1539088/11611771/ae1a6bd8-9bac-11e5-9206-42447e0fe064.gif)
-
-  - How can I get this thing into production?
-  > I'm currently working on including a guide or walkthrough, but at the moment all you have is a `devServer.js`, your first step would probably include creating a separate `server.js` file and going from there - just be sure to see how the application relies on the NODE_ENV variables to select between "dev" and "prod" files!
-
-  - What is this missing?
-  > At the moment, I have not enabled the loading of SASS, but I do plan on it. As your apps grow in size, you might want to consider creating a `utils` directory. Lastly, be sure to follow @gaeron's tips on reducer composition!
-
 ### Usage
 
 ##### Getting Started:
@@ -79,7 +72,7 @@ Ideally, fork this boilerplate, then clone.
 $ git clone https://github.com/YOUR_GITHUB_USERNAME_HERE/simple-redux-boilerplate.git
 ```
 
-Install required dependencies. 
+Install required dependencies.
 (*Did you make sure you have the right version of Node?*)
 ```
 npm install
@@ -135,9 +128,10 @@ Learn more here: [AirBnb Style Guide](https://github.com/airbnb/javascript/tree/
 ### Credits
 
 ##### Other Contributors:
- - [@yilenpan](https://github.com/yilenpan) | *working on react-router-redux!*
+>This boilerplate was initially based on [simple-redux-boilerplate](https://github.com/tsaiDavid/simple-redux-boilerplate). by
+[@tsaiDavid](https://github.com/tsaiDavid/)
 
->This boilerplate is initially based on [@gaeron's](https://github.com/gaeron) awesome [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate).
+>Which was in turn based initially on [@gaeron's](https://github.com/gaeron)  [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate).
 
 This project supports [Babel 6](https://github.com/babel/babel), with reference implementations of:
 
